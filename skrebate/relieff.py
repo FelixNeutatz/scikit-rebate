@@ -100,7 +100,7 @@ class ReliefF(BaseEstimator):
 
         """
         self._X = X  # matrix of predictive variables ('independent variables')
-        self._y = y  # vector of values for outcome variable ('dependent variable')
+        self._y = y.flatten()  # vector of values for outcome variable ('dependent variable')
 
         # Set up the properties for ReliefF -------------------------------------------------------------------------------------
         self._datalen = len(self._X)  # Number of training instances ('n')
